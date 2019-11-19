@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:600,700&display=swap');
+$dark-text: hsl(229, 25%, 31%);
+$score-text: hsl(229, 64%, 46%);
+$header-outline: hsl(217, 16%, 45%);
+
+body {
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background-repeat: no-repeat;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  height: 99vh;
+  font-size: 18px;
+  position: relative;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+header {
+  border: 2px solid $header-outline;
+  border-radius: 15px;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  justify-content: space-between;
+
+  .title {
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .score {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    background: #fff;
+    color: $dark-text;
+    border-radius: 5px;
+    p {
+        &:first-child {
+            font-size: 0.7rem;
+          }
+          &:last-child {
+            font-size: 2rem;
+          }
+    }
+  }
+}
+
+main {
+  display: grid;
+  grid-gap: 1em;
+  margin: 3rem 2rem;
+  background-image: url('../images/bg-triangle.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  button {
+    border-radius: 50%;
+    border: none;
+    padding: 1rem;
+
+    img {
+      background: #fff;
+      border-radius: 50%;
+      padding: 1.5rem;
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 3px red;
+  }
+}
+
+.paper {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  margin-left: 1em;
+
+  button {
+    background: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  }
+}
+
+.scissors {
+  grid-row: 1/2;
+  grid-column: 3/4;
+  margin-right: 1em;
+
+  button {
+    background: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  }
+}
+
+.rock {
+  grid-row: 3/4;
+  grid-column: 2/3;
+
+  button {
+    background: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  }
+}
+
+footer {
+  .btn {
+    background: transparent;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    border: 1px solid $header-outline;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    background: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  }
+}
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-window {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  &:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 999;
+  }
+  &>div {
+    width: 350px;
+    position: absolute;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: #ffffff;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    .game-rules {
+      flex-basis: 100%;
+      margin-top: 1.5rem;
+    }
+  }
+}
