@@ -48,10 +48,11 @@ header .score p:last-child {
 main {
   display: grid;
   grid-gap: 1em;
-  margin: 3rem 2rem;
+  margin: 6rem 2rem;
   background-image: url("../images/bg-triangle.svg");
   background-repeat: no-repeat;
   background-position: bottom;
+  background-size: contain;
 }
 main button {
   border-radius: 50%;
@@ -62,8 +63,8 @@ main button img {
   background: #fff;
   border-radius: 50%;
   padding: 1.5rem;
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
 }
 main button:focus {
   outline: none;
@@ -73,7 +74,8 @@ main button:focus {
 .paper {
   grid-row: 1/2;
   grid-column: 1/2;
-  margin-left: 1em;
+  margin-left: auto;
+  margin-top: -25px;
 }
 .paper button {
   background: radial-gradient(#4865f4, #5671f5);
@@ -82,7 +84,8 @@ main button:focus {
 .scissors {
   grid-row: 1/2;
   grid-column: 3/4;
-  margin-right: 1em;
+  margin-right: auto;
+  margin-top: -25px;
 }
 .scissors button {
   background: radial-gradient(#ec9e0e, #eca922);
@@ -91,6 +94,7 @@ main button:focus {
 .rock {
   grid-row: 3/4;
   grid-column: 2/3;
+  margin: 35px auto 0;
 }
 .rock button {
   background: radial-gradient(#dc2e4e, #dd405d);
@@ -179,7 +183,6 @@ footer .btn:hover {
     margin: 5rem auto;
     width: 300px;
     grid-gap: 0.3em;
-    background-size: contain;
   }
   main button img {
     width: 3.5rem;
@@ -188,11 +191,9 @@ footer .btn:hover {
   }
   main .paper {
     margin-left: 0;
-    margin-top: -25px;
   }
   main .scissors {
     margin-right: 0;
-    margin-top: -25px;
   }
 
   .modal-window > div {

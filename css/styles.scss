@@ -58,10 +58,11 @@ header {
 main {
   display: grid;
   grid-gap: 1em;
-  margin: 3rem 2rem;
+  margin: 6rem 2rem;
   background-image: url('../images/bg-triangle.svg');
   background-repeat: no-repeat;
   background-position: bottom;
+  background-size: contain;
 
   button {
     border-radius: 50%;
@@ -72,8 +73,8 @@ main {
       background: #fff;
       border-radius: 50%;
       padding: 1.5rem;
-      width: 4rem;
-      height: 4rem;
+      width: 5rem;
+      height: 5rem;
     }
   }
 
@@ -86,7 +87,8 @@ main {
 .paper {
   grid-row: 1/2;
   grid-column: 1/2;
-  margin-left: 1em;
+  margin-left: auto;
+  margin-top: -25px;
 
   button {
     background: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
@@ -96,7 +98,8 @@ main {
 .scissors {
   grid-row: 1/2;
   grid-column: 3/4;
-  margin-right: 1em;
+  margin-right: auto;
+  margin-top: -25px;
 
   button {
     background: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
@@ -106,6 +109,7 @@ main {
 .rock {
   grid-row: 3/4;
   grid-column: 2/3;
+  margin: 35px auto 0;
 
   button {
     background: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
@@ -197,7 +201,6 @@ footer {
     margin: 5rem auto;
     width: 300px;
     grid-gap: 0.3em;
-    background-size: contain;
 
     button {
       img {
@@ -208,11 +211,9 @@ footer {
     }
     .paper {
       margin-left: 0;
-      margin-top: -25px;
     }
     .scissors {
       margin-right: 0;
-      margin-top: -25px;
     }
   }
   .modal-window {
