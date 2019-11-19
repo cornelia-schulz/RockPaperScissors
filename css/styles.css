@@ -7,7 +7,8 @@ body {
   background: radial-gradient(#1f3756, #141539);
   background-repeat: no-repeat;
   font-family: "Barlow Semi Condensed", sans-serif;
-  height: 99vh;
+  height: 100vh;
+  padding-top: 2rem;
   font-size: 18px;
   position: relative;
 }
@@ -112,7 +113,7 @@ footer .btn:hover {
 
 .container {
   max-width: 600px;
-  margin: 2rem auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
