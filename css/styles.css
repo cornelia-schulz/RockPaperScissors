@@ -15,6 +15,11 @@ body {
 }
 
 h2 {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+h3 {
   font-size: 1.5rem;
 }
 
@@ -149,7 +154,7 @@ footer .btn:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 2em;
-  background: #ffffff;
+  background: #fff;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -168,6 +173,21 @@ footer .btn:hover {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.result h2 {
+  margin-bottom: 1em;
+}
+.result .player {
+  text-align: center;
+}
+.result .house {
+  text-align: center;
 }
 
 @media only screen and (max-width: 630px) {

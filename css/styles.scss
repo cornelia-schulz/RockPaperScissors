@@ -2,6 +2,7 @@
 $dark-text: hsl(229, 25%, 31%);
 $score-text: hsl(229, 64%, 46%);
 $header-outline: hsl(217, 16%, 45%);
+$white-text: #fff;
 
 * {
   box-sizing: border-box;
@@ -19,6 +20,11 @@ body {
 }
 
 h2 {
+  font-size: 1.6rem;
+  color: $white-text;
+}
+
+h3 {
   font-size: 1.5rem;
 }
 
@@ -28,7 +34,7 @@ header {
   padding: 1rem 2rem;
   display: flex;
   flex-direction: row;
-  color: #fff;
+  color: $white-text;
   justify-content: space-between;
 
   .title {
@@ -71,7 +77,7 @@ main {
     padding: 1rem;
 
     img {
-      background: #fff;
+      background: $white-text;
       border-radius: 50%;
       padding: 1.5rem;
       width: 7rem;
@@ -120,7 +126,7 @@ main {
 footer {
   .btn {
     background: transparent;
-    color: #fff;
+    color: $white-text;
     padding: 0.5rem 2rem;
     border: 1px solid $header-outline;
     border-radius: 5px;
@@ -167,7 +173,7 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 2em;
-    background: #ffffff;
+    background: $white-text;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -188,6 +194,24 @@ footer {
   overflow: hidden;
   clip: rect(0,0,0,0);
   border: 0;
+}
+
+.result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  h2 {
+    margin-bottom: 1em;
+  }
+
+  .player {
+    text-align: center;
+  }
+  
+  .house {
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 630px) {
